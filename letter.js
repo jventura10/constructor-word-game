@@ -1,13 +1,12 @@
-module.exports=function(a){
+var letter=function(a){
     this.value=a;
-    this.hasBeenGuessed=false;
-    this.fillSpot=function(){
+    this.hasBeenGuessed;
+    this.toString=function(){
         if(this.hasBeenGuessed===true){
             return this.value;
         }
-        else{
-            return "_";
-        }
+        
+        return "_";
     }
     this.checkGuess=function(x){
         if(x===this.value){
@@ -19,11 +18,4 @@ module.exports=function(a){
     }
 }
 
-//Checking if Constructor Works
-// var guess=new letter("a");
-
-// console.log(guess.fillSpot());
-// guess.checkGuess("z");
-// console.log(guess.fillSpot());
-// guess.checkGuess("a");
-// console.log(guess.fillSpot());
+module.exports=letter;
