@@ -9,6 +9,7 @@ var newWord;
 function changeWord(){
    wordChosen= words[Math.floor(Math.random() * words.length)];
    newWord=new word(wordChosen);
+   newWord.createObjs();
 }
 
 function takeGuess(){

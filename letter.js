@@ -1,6 +1,7 @@
 var letter=function(a){
     this.value=a;
-    this.hasBeenGuessed;
+    this.hasBeenGuessed=false;
+    
     this.toString=function(){
         if(this.hasBeenGuessed===true){
             return this.value;
@@ -9,11 +10,13 @@ var letter=function(a){
         return "_";
     }
     this.checkGuess=function(x){
-        if(x===this.value){
-            this.hasBeenGuessed=true;
-        }
-        else{
-            this.hasBeenGuessed=false;
+        if(this.hasBeenGuessed===false){
+            if(x===this.value){
+                this.hasBeenGuessed=true;
+            }
+            else{
+                this.hasBeenGuessed=false;
+            }
         }
     }
 }

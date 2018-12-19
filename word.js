@@ -2,13 +2,16 @@ var letter=require("./letter.js")
 
 var word=function(answer){
     this.letArr=[];
+    this.ans=answer;
 
-    for(var j=0;j<answer.length;j++){
-        let char=answer.charAt(j);
-
-        let newLet=new letter(char);
-
-        this.letArr.push(newLet);
+    this.createObjs=function(){
+        for(var j=0;j<this.ans.length;j++){
+            let char=this.ans.charAt(j);
+    
+            let newLet=new letter(char);
+    
+            this.letArr.push(newLet);
+        }
     }
 
     this.showWord=function(){
