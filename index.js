@@ -20,10 +20,17 @@ function takeGuess(){
             name: "guess"
         }
     ]).then(function(inquirerResponse){
+        tries++;
         newWord.lookGuess(inquirerResponse.guess);
         newWord.showWord();
-        tries++;
-        mainGame();
+        let hasWon=newWord.checkWin();
+        if(hasWon===true){
+            console.log("YOU WON!!!");
+            replay();
+        }
+        else{
+            mainGame();
+        }
     });
 
 }
@@ -52,6 +59,7 @@ function mainGame(){
         takeGuess();
     }
     else{
+        console.log("You Lost :( ");
         replay();
     }
 }
