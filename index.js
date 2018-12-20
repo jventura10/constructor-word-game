@@ -13,6 +13,10 @@ function changeWord(){
 }
 
 function takeGuess(){
+    if(tries===0){
+        newWord.showWord();
+    }
+
     inquirer.prompt([
         {
             type:"input",
