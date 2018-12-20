@@ -1,13 +1,13 @@
 var inquirer=require("inquirer");
+var randomWords = require('random-words');
 var word=require("./word.js");
 
 var tries=0;
-var words=["javier","ventura"]
 var wordChosen; 
 var newWord;
 
 function changeWord(){
-   wordChosen= words[Math.floor(Math.random() * words.length)];
+   wordChosen= randomWords()
    newWord=new word(wordChosen);
    newWord.createObjs();
 }
@@ -60,6 +60,7 @@ function mainGame(){
     }
     else{
         console.log("You Lost :( ");
+        console.log("The answer was: "+wordChosen);
         replay();
     }
 }
