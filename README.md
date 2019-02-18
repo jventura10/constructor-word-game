@@ -2,7 +2,7 @@
 
 This repository is a Node Command Line Hangman Game.
 
-To run the game you must have Node Downloaded. Once You are in the correct directory you 
+To run the game you must have Node Downloaded. Once you clone the repository and are in the correct directory you 
 must enter 
 
 npm install 
