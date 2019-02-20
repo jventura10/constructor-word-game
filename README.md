@@ -1,6 +1,6 @@
 # constructor-word-game
 
-This repository is a Node Command Line Hangman Game.
+This repository is a NodeJS Command Line Hangman Game.
 
 To run the game you must have Node Downloaded. Once you clone the repository and are in the correct directory you 
 must enter 
