@@ -13,4 +13,4 @@ the word of the game.
 To run the game you must enter 
 the command : node index.js
 
-
+![Example](/images/example.gif)
